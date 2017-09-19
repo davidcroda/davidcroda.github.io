@@ -65,12 +65,12 @@
             </canvas>
           </div>
 
-          <div class="col card" ng-mouseleave="showEngagementGeo = false">
+          <div class="col card" ng-mouseleave="showEngagementGeo = false; showRepeatEngagement = false">
             <p class="card-title">Engagement</p>
 
             <div class="button-wrap">
-              <span class="card-button geo-button" ng-click="showEngagementGeo = !showEngagementGeo">Top Cities</span>
-              <span class="card-button repeat-button" ng-click="showRepeatEngagement = !showRepeatEngagement">Repeat Engagement</span>
+              <span class="card-button geo-button" ng-click="showEngagementGeo = !showEngagementGeo; showRepeatEngagement = false">Top Cities</span>
+              <span class="card-button repeat-button" ng-click="showRepeatEngagement = !showRepeatEngagement; showEngagementGeo = false">Repeat Engagement</span>
             </div>
 
             <div class="location-pop" ng-show="showEngagementGeo">
@@ -84,9 +84,21 @@
               </ul>
             </div>
 
+            <div class="repeat-pop" ng-show="showRepeatEngagement">
+              <ng-gauge class="gauge" size="180" type="arch" thick="5"
+                min="0" max="100" value="58"
+                cap="round" append="%"
+                foreground-color="green" background-color="#EEE">
+              </ng-gauge>
+
+              <div class="gauge-previous">
+                <p class="gauge-last-period">This week</p>
+              </div>
+            </div>
+
             <canvas id="line"
-              ng-class="{fade: showEngagementGeo}"
               class="chart chart-line"
+              ng-class="{fade: showEngagementGeo || showRepeatEngagement}"
               chart-data="engagement.data"
               chart-labels="engagement.labels"
               chart-series="engagement.series"

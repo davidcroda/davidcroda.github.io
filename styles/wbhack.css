@@ -7,7 +7,7 @@ body {
 }
 .logo {
   display: block;
-  width: 300px;
+  width: 250px;
   padding-bottom: 30px;
   margin: 30px auto 20px;
 }
@@ -47,6 +47,12 @@ body {
 .location-pop {
   position: absolute;
   top: 38%;
+}
+
+.repeat-pop {
+  position: absolute;
+  top: 27%;
+  left: 25%;
 }
 
 .location-pop li {
@@ -99,4 +105,8 @@ body {
 
 .fade {
   opacity: .15;
+}
+
+.hide {
+  display: none;
 }
