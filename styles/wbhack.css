@@ -23,20 +23,30 @@ body {
   transition: all .2s;
 }
 
-.location-button {
+.card-button {
+  display: inline-block;
   margin-left: 20px;
   text-align: center;
-  width: 30%;
   border: 1px solid grey;
+  font-size: 14px;
   cursor: pointer;
 }
 
-.location-button:hover {
+.card-button:hover {
   background-color: beige;
+}
+
+.geo-button {
+  width: 30%;
+}
+
+.repeat-button {
+  width: 50%;
 }
 
 .location-pop {
   position: absolute;
+  top: 38%;
 }
 
 .location-pop li {

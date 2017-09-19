@@ -38,19 +38,22 @@
 
           <div class="col card" ng-mouseleave="showImpressionGeo = false">
             <p class="card-title">Impression</p>
-            <div class="location-wrap">
-              <p class="location-button" ng-click="showImpressionGeo = !showImpressionGeo">Top Cities</p>
-              <div class="location-pop" ng-show="showImpressionGeo">
-                <ul>
-                  <li>1. Los Angeles (18%)</li>
-                  <li>2. NYC (17%)</li>
-                  <li>3. Chicago (13%)</li>
-                  <li>4. Miami (12%)</li>
-                  <li>5. San Francisco (10%)</li>
-                  <li>6. Others (30%)</li>
-                </ul>
-              </div>
+
+            <div class="button-wrap">
+              <span class="card-button geo-button" ng-click="showImpressionGeo = !showImpressionGeo">Top Cities</span>
             </div>
+
+            <div class="location-pop" ng-show="showImpressionGeo">
+              <ul>
+                <li>1. Los Angeles (18%)</li>
+                <li>2. NYC (17%)</li>
+                <li>3. Chicago (13%)</li>
+                <li>4. Miami (12%)</li>
+                <li>5. San Francisco (10%)</li>
+                <li>6. Others (30%)</li>
+              </ul>
+            </div>
+
             <canvas id="line"
               ng-class="{fade: showImpressionGeo}"
               class="chart chart-line"
@@ -64,19 +67,23 @@
 
           <div class="col card" ng-mouseleave="showEngagementGeo = false">
             <p class="card-title">Engagement</p>
-            <div class="location-wrap">
-              <p class="location-button" ng-click="showEngagementGeo = !showEngagementGeo">Top Cities</p>
-              <div class="location-pop" ng-show="showEngagementGeo">
-                <ul>
-                  <li>1. NYC (20%)</li>
-                  <li>2. Chicago (15%)</li>
-                  <li>2. Los Angeles (12%)</li>
-                  <li>4. Miami (12%)</li>
-                  <li>5. San Francisco (11%)</li>
-                  <li>6. Others (40%)</li>
-                </ul>
-              </div>
+
+            <div class="button-wrap">
+              <span class="card-button geo-button" ng-click="showEngagementGeo = !showEngagementGeo">Top Cities</span>
+              <span class="card-button repeat-button" ng-click="showRepeatEngagement = !showRepeatEngagement">Repeat Engagement</span>
             </div>
+
+            <div class="location-pop" ng-show="showEngagementGeo">
+              <ul>
+                <li>1. NYC (20%)</li>
+                <li>2. Chicago (15%)</li>
+                <li>2. Los Angeles (12%)</li>
+                <li>4. Miami (12%)</li>
+                <li>5. San Francisco (11%)</li>
+                <li>6. Others (40%)</li>
+              </ul>
+            </div>
+
             <canvas id="line"
               ng-class="{fade: showEngagementGeo}"
               class="chart chart-line"
