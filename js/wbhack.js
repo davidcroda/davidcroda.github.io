@@ -2,7 +2,7 @@ var app = angular.module('myApp', ['ui.bootstrap', 'chart.js', 'angularjs-gauge'
 
 app.controller('MainController', function($scope) {
     var obj = {
-      labels: ['9/7', '9/14', '9/21', '9/28'],
+      labels: ['9/1', '9/3', '9/5', '9/7'],
       options: {
         elements: {
           line: {
