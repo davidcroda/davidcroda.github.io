@@ -22,16 +22,16 @@
         <div class="row">
           <div class="col card">
             <p class="card-title">Impression</p>
-            <p class="gauge-dates">September 8 - September 30</p>
+            <p class="gauge-dates">September 1 - September 30</p>
             <ng-gauge class="gauge" size="180" type="arch" thick="5"
-              min="0" max="20" value="13.5"
+              min="0" max="100" value="80.3"
               cap="round" append="%"
-              foreground-color="#489bfb" background-color="#EEE">
+              foreground-color="green" background-color="#EEE">
             </ng-gauge>
 
             <div class="gauge-previous">
               <p class="gauge-last-period">Last Period</p>
-              <p class="gauge-last-percent">11%</p>
+              <p class="gauge-last-percent">55%</p>
             </div>
           </div>
 
@@ -39,11 +39,40 @@
             <p class="card-title">Impression</p>
             <canvas id="line"
               class="chart chart-line"
-              chart-data="clickThrough.data"
-              chart-labels="clickThrough.labels"
-              chart-series="clickThrough.series"
-              chart-options="clickThrough.options"
-              chart-dataset-override="clickThrough.datasetOverride">
+              chart-data="impression.data"
+              chart-labels="impression.labels"
+              chart-series="impression.series"
+              chart-options="impression.options"
+              chart-dataset-override="impression.datasetOverride">
+            </canvas>
+          </div>
+
+          <div class="col card">
+            <p class="card-title">Engagement</p>
+            <canvas id="line"
+              class="chart chart-line"
+              chart-data="engagement.data"
+              chart-labels="engagement.labels"
+              chart-series="engagement.series"
+              chart-options="engagement.options"
+              chart-dataset-override="engagement.datasetOverride">
+            </canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- second row -->
+      <div class="container">
+        <div class="row">
+          <div class="col card">
+            <p class="card-title">Chatter</p>
+            <canvas id="line"
+              class="chart chart-line"
+              chart-data="chatter.data"
+              chart-labels="chatter.labels"
+              chart-series="chatter.series"
+              chart-options="chatter.options"
+              chart-dataset-override="chatter.datasetOverride">
             </canvas>
           </div>
 
@@ -58,49 +87,20 @@
               chart-dataset-override="shareRate.datasetOverride">
             </canvas>
           </div>
-        </div>
-      </div>
-
-      <!-- second row -->
-      <div class="container">
-        <div class="row">
-          <div class="col card">
-            <p class="card-title">Activations</p>
-            <canvas id="line"
-              class="chart chart-line"
-              chart-data="activations.data"
-              chart-labels="activations.labels"
-              chart-series="activations.series"
-              chart-options="activations.options"
-              chart-dataset-override="activations.datasetOverride">
-            </canvas>
-          </div>
 
           <div class="col card">
             <p class="card-title">Conversions</p>
-            <p class="gauge-dates">September 8 - September 30</p>
+            <p class="gauge-dates">September 1 - September 30</p>
             <ng-gauge class="gauge" size="180" type="arch" thick="5"
-              min="0" max="100" value="80.0"
+              min="0" max="100" value="78.4"
               cap="round" append="%"
-              foreground-color="#489bfb" background-color="#EEE">
+              foreground-color="green" background-color="#EEE">
             </ng-gauge>
 
             <div class="gauge-previous">
               <p class="gauge-last-period">Last Period</p>
-              <p class="gauge-last-percent">64%</p>
+              <p class="gauge-last-percent">53%</p>
             </div>
-          </div>
-
-          <div class="col card">
-            <p class="card-title">Engagement</p>
-            <canvas id="line"
-              class="chart chart-line"
-              chart-data="engagement.data"
-              chart-labels="engagement.labels"
-              chart-series="engagement.series"
-              chart-options="engagement.options"
-              chart-dataset-override="engagement.datasetOverride">
-            </canvas>
           </div>
         </div>
       </div>
