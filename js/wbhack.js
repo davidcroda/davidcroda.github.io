@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['chart.js', 'angularjs-gauge']);
+var app = angular.module('myApp', ['ui.bootstrap', 'chart.js', 'angularjs-gauge']);
 
 app.controller('MainController', function($scope) {
     var obj = {
@@ -33,6 +33,8 @@ app.controller('MainController', function($scope) {
       ]
     };
 
+    $scope.showImpressionGeo = false;
+    $scope.showEngagementGeo = false;
     $scope.impression = angular.copy(obj);
     $scope.engagement = angular.copy(obj);
     $scope.chatter = angular.copy(obj);

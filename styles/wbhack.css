@@ -23,6 +23,26 @@ body {
   transition: all .2s;
 }
 
+.location-button {
+  margin-left: 20px;
+  text-align: center;
+  width: 30%;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.location-button:hover {
+  background-color: beige;
+}
+
+.location-pop {
+  position: absolute;
+}
+
+.location-pop li {
+  list-style: none;
+}
+
 .chart-line {
   margin-top: 40px;
 }
@@ -65,4 +85,8 @@ body {
   opacity: .5;
   font-size: 18px;
   font-weight: bold;
+}
+
+.fade {
+  opacity: .15;
 }
